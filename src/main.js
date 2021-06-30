@@ -24,7 +24,7 @@ const HTTP_PROTOCOL = {
   https: 2,
 }
 
-export default Base.extend({
+const FuncComp = Base.extend({
   props: {
     apis: Array,
   },
@@ -52,3 +52,9 @@ export default Base.extend({
     },
   },
 })
+
+export default function(apis) {
+  const comp = new FuncComp()
+  comp.apis = apis
+  return comp
+}
