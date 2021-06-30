@@ -26,7 +26,7 @@ const HTTP_PROTOCOL = {
 
 export default Base.extend({
   props: {
-    apis: Array, // number[]
+    apis: Array,
   },
   methods: {
     apiUrl(api) {
