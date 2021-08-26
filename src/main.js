@@ -46,8 +46,8 @@ const FuncComp = Base.extend({
           data: apiOption.method !== HTTP_METHOD.get ? data : {},
         })
         .then((res) => {
-          const { resultPath } = apiOption.resultSchema
-          return resultPath ? objectPath.get(res, resultPath) : res.result
+          const { resultPath } = apiOption.resultSchema || {}
+          return resultPath ? objectPath.get(res, resultPath) : res.data.result
         })
     },
   },
